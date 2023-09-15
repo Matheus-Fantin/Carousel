@@ -69,7 +69,7 @@
                     <p>
                         Cambio automatico, 4 POrtas, vidros e trvas elétricas
                     </p>
-                    <strong>R$ 75.000,00</strong>
+                    <strong class="price">R$ 75.000,00</strong>
                     <button type="button">Tenho interesse</button>
                 </li>
                 <li class="item-central">
@@ -78,7 +78,7 @@
                     <p>
                         Cambio automatico, 4 POrtas, vidros e trvas elétricas
                     </p>
-                    <strong>R$ 75.000,00</strong>
+                    <strong class="price">R$ 75.000,00</strong>
                     <button type="button">Tenho interesse</button>
                 </li>
                 <li>
@@ -87,7 +87,7 @@
                     <p>
                         Cambio automatico, 4 POrtas, vidros e trvas elétricas
                     </p>
-                    <strong>R$ 75.000,00</strong>
+                    <strong class="price">R$ 75.000,00</strong>
                     <button type="button">Tenho interesse</button>
                 </li>
                 <li>
@@ -96,7 +96,7 @@
                     <p>
                         Cambio automatico, 4 POrtas, vidros e trvas elétricas
                     </p>
-                    <strong>R$ 75.000,00</strong>
+                    <strong class="price">R$ 75.000,00</strong>
                     <button type="button">Tenho interesse</button>
                 </li>
                 <li class="item-central">
@@ -105,7 +105,7 @@
                     <p>
                         Cambio automatico, 4 POrtas, vidros e trvas elétricas
                     </p>
-                    <strong>R$ 75.000,00</strong>
+                    <strong class="price">R$ 75.000,00</strong>
                     <button type="button">Tenho interesse</button>
                 </li>
                 <li>
@@ -114,7 +114,7 @@
                     <p>
                         Cambio automatico, 4 POrtas, vidros e trvas elétricas
                     </p>
-                    <strong>R$ 75.000,00</strong>
+                    <strong class="price">R$ 75.000,00</strong>
                     <button type="button">Tenho interesse</button>
                 </li>
             </ul>
@@ -199,7 +199,7 @@
             </ul>
         </div>
     </section>
-    <section>
+    <section id="contato">
         <div class="container">
             <h2>Entre em contato</h2>
             <form>
@@ -217,7 +217,7 @@
                 </div>
                 <div  class="form-campo">
                     <label for="nome">Veiculo de interesse:</label>
-                    <input type="text" id="nome" name="pedido">
+                    <input type="text" id="pedido" name="veiculoDeInterrese">
                 </div>
                 <div  class="form-campo">
                     <label for="mensagem">Mensagem:</label>
@@ -257,49 +257,6 @@
     <script src="./js/jquery.mask.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/messages_pt_BR.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#Carousel-imagens').slick({
-                autoplay:true,
-            });
-
-            $(document).ready(function(){ $('#nome_id').slick();})
-            $('.menu-hamburguer').click(function(){
-                $('nav').slideToggle();
-            })
-
-            $('#telefone').mask('(00) 00000-0000',{
-                placeholder: '(00) 00000-0000'
-            })
-
-            $('form').validate({
-                rules:{
-                    nome:{
-                        required: true
-                    },
-                    email:{
-                        required: true,
-                        email: true
-                    },
-                    telefone:{
-                        required: true
-                    },
-                    pedido:{
-                        required: true
-                    }
-                },
-                messages: {
-                    nome:'Por favor insira o seu nome'
-                },
-                submitHandeler: function(form) {
-                    console.log(form)
-                },
-                invalidHandeler:function(evento, validador) {
-                    let camposIncorretos = validador.numberofinvalids();
-                    console.log(camposIncorretos)
-                }
-            })
-        });
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
